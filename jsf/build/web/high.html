@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Grafico</title>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<style type="text/css">
+${demo.css}
+	</style>
+	<script type="text/javascript">
+            $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});
+        </script>
+        <script type="text/javascript">
+>
+            var chart1; // globally available
+$(function() {
+      chart1 = new Highcharts.StockChart({
+         chart: {
+            renderTo: 'container'
+         },
+         rangeSelector: {
+            selected: 1
+         },
+         series: [{
+            name: 'USD to EUR',
+            data: usdtoeur // predefined JavaScript array
+         }];
+      });
+   });
+        </script>
+    </head>
+    <body>
+      <script src="http://code.highcharts.com/highcharts.js"></script>   
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      
+      <div id="container" style="height:300px"></div>
+    </body>
+</html>
